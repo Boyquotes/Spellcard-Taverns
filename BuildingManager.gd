@@ -25,7 +25,7 @@ func _process(delta):
 			get_tree().root.add_child(obj)
 			obj.ActiveBuildableObject = false
 			obj.runSpawn()
-#			obj.setDisabled(false)
+			obj.SetDisabled(false)
 			obj.translation = CurrentSpawnable.translation
 			navMesh.bake_navigation_mesh(true)
 			
@@ -44,7 +44,7 @@ func SpawnObj(obj):
 	if CurrentSpawnable != null:
 		CurrentSpawnable.queue_free()
 	CurrentSpawnable = obj.instance()
-#	CurrentSpawnable.SetDisabled(false)
+	CurrentSpawnable.SetDisabled(true)
 	get_tree().root.add_child(CurrentSpawnable)
 	GameManager.CurrentState = GameManager.State.Building
 	print("Object Created")

@@ -29,12 +29,12 @@ material/0 = SubResource( 3 )
 
 [node name="NavigationAgent" type="NavigationAgent" parent="."]
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 0.978023, 0, 0, 0, 1.96296, 0, 0, 0, 0.556797, 0, 2.00833, 0 )
-shape = SubResource( 4 )
-
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.17477, 0 )
 pixel_size = 0.08
 text = "RUNEWOOD
  GRUNT"
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.86165, 0, 0, 0, 1.76354, 0, 0, 0, 0.471867, 0, 1.81462, 0 )
+shape = SubResource( 4 )

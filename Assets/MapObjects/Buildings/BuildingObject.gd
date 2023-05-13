@@ -60,5 +60,5 @@ func runSpawn():
 #
 
 #
-#func SetDisabled(disabled : bool):
-#	$CollisionShape.disabled = disabled
+func SetDisabled(disabled : bool):
+	$CollisionShape.disabled = disabled
