@@ -8,7 +8,7 @@ enum State{
 var CurrentState = State.Play
 
 var Runewood := 500 # Wood
-var Voidstone := 50 # Stone
+var Voidstone := 500 # Stone
 var Lunarium := 100 # Gold
-var Ethertite := 0 # Iron
+var Ethertite := 1110 # Iron
 var AtekGas := 1000 # Food

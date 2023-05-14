@@ -1,12 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Home/roof.material" type="Material" id=1]
 [ext_resource path="res://Assets/Home/border.material" type="Material" id=2]
 [ext_resource path="res://Assets/Home/door.material" type="Material" id=3]
 [ext_resource path="res://Assets/Home/window.material" type="Material" id=4]
 [ext_resource path="res://Assets/Home/_defaultMat.material" type="Material" id=5]
-[ext_resource path="res://Assets/BuildingObject.gd" type="Script" id=6]
-[ext_resource path="res://Scenes/StoneCutter.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "house_type01_Mesh house_type01"
@@ -76,10 +74,6 @@ data = PoolVector3Array( 0.32, 0.27, -0.078, 0.18, 0.27, -0.078, 0.18, 0.27, -0.
 
 [node name="StoneMasons" type="StaticBody" groups=["building"]]
 transform = Transform( 11.26, 0, 0, 0, 11.26, 0, 0, 0, 11.26, 0, 0, 0 )
-script = ExtResource( 6 )
-WoodCost = 15
-PopulationCost = 1
-Actor = ExtResource( 7 )
 
 [node name="tmpParent" type="Spatial" parent="."]
 

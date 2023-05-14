@@ -8,6 +8,10 @@ export var RunewoodCost : int
 export var VoidstoneCost : int
 export var LunariumCost : int
 export var EthertiteCost : int 
+export var PopulationCost : int
+
+export var IncreasePopCap : bool = false
+export var IncreaseCapAmount : int = 5
 
 export var SpawnActor : bool = true
 export var Actor : PackedScene
@@ -31,22 +35,15 @@ func _on_Area_area_exited(area):
 		objects.remove(objects.find(area))
 		if(objects.size() <= 0):
 			BuildingManager.AbleToBuild = true
-		pass
-
- 
-func _process(delta):
-	pass
-
-
-
+		pass 
 
 func runSpawn():
 	if SpawnActor:
 		var actor = Actor.instance()
-		get_tree().root.add_child(actor) 
-#		currentActor = actor
+		currentActor = actor
+		actor.Hut = $SpawnPoint
+		get_tree().root.add_child(actor)
 		actor.global_translation = $SpawnPoint.global_translation
-		actor.Hut = $SpawnPoint.global_translation
 #	if IncreasePopCap:
 #		GameManager.MaxPopulation += IncreaseCapAmount
 #

@@ -1,12 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Home/_defaultMat.material" type="Material" id=1]
 [ext_resource path="res://Assets/Home/roof.material" type="Material" id=2]
 [ext_resource path="res://Assets/Home/door.material" type="Material" id=3]
-[ext_resource path="res://Assets/BuildingObject.gd" type="Script" id=4]
 [ext_resource path="res://Assets/Home/window.material" type="Material" id=5]
 [ext_resource path="res://Assets/Home/border.material" type="Material" id=6]
-[ext_resource path="res://Scenes/OrchardWorker.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ConvexPolygonShape" id=2]
 points = PoolVector3Array( 0.0290638, 1.03344, 0.45, 0.0290638, 1.03344, -0.45, -0.429069, 0.804394, 0.45, 0.0290638, 0.999953, 0.45, 0.429069, 0.849919, 0.399961, 0.0290638, 0.999953, -0.45, -0.429069, 0.804394, -0.45, 0.429069, 0.849919, -0.400049, -0.415713, 0.777584, 0.45, -0.370941, 0, 0.399961, 0.329026, 0, 0.409916, 0.429069, 0, 0.399961, -0.415713, 0.777584, -0.45, 0.429069, 0, -0.400049, -0.370941, 0, -0.400049, 0.129023, 0, 0.409916 )
@@ -78,9 +76,6 @@ surfaces/4 = {
 
 [node name="Orchard" type="StaticBody" groups=["building"]]
 transform = Transform( 10.304, 0, 0, 0, 10.304, 0, 0, 0, 10.304, 0, 0, 0 )
-script = ExtResource( 4 )
-WoodCost = 5
-Actor = ExtResource( 7 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 2 )

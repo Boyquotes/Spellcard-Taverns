@@ -1,14 +1,15 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Assets/MapObjects/Units/Gathering/RunewoodHarvester.gd" type="Script" id=1]
+[ext_resource path="res://Assets/MapObjects/Units/Gathering/GatheringUnit.gd" type="Script" id=1]
+
+[sub_resource type="CylinderShape" id=5]
+radius = 0.682265
 
 [sub_resource type="CylinderMesh" id=4]
 
 [sub_resource type="SpatialMaterial" id=2]
 albedo_color = Color( 0.643137, 0.156863, 0.796078, 1 )
 metallic = 0.31
-
-[sub_resource type="CylinderShape" id=5]
 
 [sub_resource type="CapsuleMesh" id=1]
 
@@ -18,15 +19,19 @@ metallic = 0.31
 
 [node name="RunewoodHarvester" type="KinematicBody"]
 script = ExtResource( 1 )
+WalkSpeed = 15
+ResourceGenerationAmount = 5
+ResourceNameToGet = "Runewood"
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.862, 0, 0, 0, -1.764, 7.127e-08, 0, -2.66357e-07, -0.472, 0, 1.81462, 0 )
+shape = SubResource( 5 )
+disabled = true
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1.76354, 0, 0, 0, 0.992357, 0, 1.81462, 0 )
 mesh = SubResource( 4 )
 material/0 = SubResource( 2 )
-
-[node name="CollisionShape" type="CollisionShape" parent="MeshInstance"]
-transform = Transform( 0.86165, 0, 0, 0, 1, 0, 0, 0, 0.475501, 0, 0, 0 )
-shape = SubResource( 5 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="."]
 transform = Transform( 0.884955, 0, 0, 0, 0.682767, 0, 0, 0, 0.569077, 0, 3.32547, 0 )
