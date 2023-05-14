@@ -112,18 +112,22 @@ margin_top = 18.0
 margin_right = 176.0
 margin_bottom = 32.0
 
-[node name="Voidstone" type="Label" parent="GUI/ResourceStats/VBoxContainer/Voidstone"]
+[node name="VBoxContainer" type="HBoxContainer" parent="GUI/ResourceStats/VBoxContainer/Voidstone"]
+margin_right = 112.0
+margin_bottom = 14.0
+
+[node name="Voidstone" type="Label" parent="GUI/ResourceStats/VBoxContainer/Voidstone/VBoxContainer"]
 margin_right = 68.0
 margin_bottom = 14.0
 text = "Voidstone:"
 
-[node name="Space" type="Label" parent="GUI/ResourceStats/VBoxContainer/Voidstone"]
+[node name="Space" type="Label" parent="GUI/ResourceStats/VBoxContainer/Voidstone/VBoxContainer"]
 margin_left = 72.0
 margin_right = 84.0
 margin_bottom = 14.0
 text = "   "
 
-[node name="VoidstoneValue" type="Label" parent="GUI/ResourceStats/VBoxContainer/Voidstone"]
+[node name="VoidstoneValue" type="Label" parent="GUI/ResourceStats/VBoxContainer/Voidstone/VBoxContainer"]
 margin_left = 88.0
 margin_right = 112.0
 margin_bottom = 14.0
@@ -134,18 +138,22 @@ margin_top = 36.0
 margin_right = 176.0
 margin_bottom = 50.0
 
-[node name="Lunarium" type="Label" parent="GUI/ResourceStats/VBoxContainer/Lunarium"]
+[node name="VBoxContainer" type="HBoxContainer" parent="GUI/ResourceStats/VBoxContainer/Lunarium"]
+margin_right = 116.0
+margin_bottom = 14.0
+
+[node name="Lunarium" type="Label" parent="GUI/ResourceStats/VBoxContainer/Lunarium/VBoxContainer"]
 margin_right = 64.0
 margin_bottom = 14.0
 text = "Lunarium:"
 
-[node name="Space" type="Label" parent="GUI/ResourceStats/VBoxContainer/Lunarium"]
+[node name="Space" type="Label" parent="GUI/ResourceStats/VBoxContainer/Lunarium/VBoxContainer"]
 margin_left = 68.0
 margin_right = 88.0
 margin_bottom = 14.0
 text = "     "
 
-[node name="LunariumValue" type="Label" parent="GUI/ResourceStats/VBoxContainer/Lunarium"]
+[node name="LunariumValue" type="Label" parent="GUI/ResourceStats/VBoxContainer/Lunarium/VBoxContainer"]
 margin_left = 92.0
 margin_right = 116.0
 margin_bottom = 14.0
@@ -156,18 +164,22 @@ margin_top = 54.0
 margin_right = 176.0
 margin_bottom = 68.0
 
-[node name="Ethertite" type="Label" parent="GUI/ResourceStats/VBoxContainer/Ethertite"]
+[node name="VBoxContainer" type="HBoxContainer" parent="GUI/ResourceStats/VBoxContainer/Ethertite"]
+margin_right = 115.0
+margin_bottom = 14.0
+
+[node name="Ethertite" type="Label" parent="GUI/ResourceStats/VBoxContainer/Ethertite/VBoxContainer"]
 margin_right = 59.0
 margin_bottom = 14.0
 text = "Ethertite:"
 
-[node name="Space" type="Label" parent="GUI/ResourceStats/VBoxContainer/Ethertite"]
+[node name="Space" type="Label" parent="GUI/ResourceStats/VBoxContainer/Ethertite/VBoxContainer"]
 margin_left = 63.0
 margin_right = 87.0
 margin_bottom = 14.0
 text = "      "
 
-[node name="EthertiteValue" type="Label" parent="GUI/ResourceStats/VBoxContainer/Ethertite"]
+[node name="EthertiteValue" type="Label" parent="GUI/ResourceStats/VBoxContainer/Ethertite/VBoxContainer"]
 margin_left = 91.0
 margin_right = 115.0
 margin_bottom = 14.0
@@ -178,18 +190,22 @@ margin_top = 72.0
 margin_right = 176.0
 margin_bottom = 86.0
 
-[node name="AtekGas" type="Label" parent="GUI/ResourceStats/VBoxContainer/AtekGas"]
+[node name="VBoxContainer" type="HBoxContainer" parent="GUI/ResourceStats/VBoxContainer/AtekGas"]
+margin_right = 113.0
+margin_bottom = 14.0
+
+[node name="AtekGas" type="Label" parent="GUI/ResourceStats/VBoxContainer/AtekGas/VBoxContainer"]
 margin_right = 57.0
 margin_bottom = 14.0
 text = "AtekGas:"
 
-[node name="Space" type="Label" parent="GUI/ResourceStats/VBoxContainer/AtekGas"]
+[node name="Space" type="Label" parent="GUI/ResourceStats/VBoxContainer/AtekGas/VBoxContainer"]
 margin_left = 61.0
 margin_right = 85.0
 margin_bottom = 14.0
 text = "      "
 
-[node name="AtekGasValue" type="Label" parent="GUI/ResourceStats/VBoxContainer/AtekGas"]
+[node name="AtekGasValue" type="Label" parent="GUI/ResourceStats/VBoxContainer/AtekGas/VBoxContainer"]
 margin_left = 89.0
 margin_right = 113.0
 margin_bottom = 14.0

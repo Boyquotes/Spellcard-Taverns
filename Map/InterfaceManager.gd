@@ -5,7 +5,7 @@ var RunewoodGatherers : PackedScene = ResourceLoader.load("res://Assets/MapObjec
 
 func _process(delta):
 	$ResourceStats/VBoxContainer/Runewood/VBoxContainer/RunewoodValue.text = str(GameManager.Runewood)
-#	$ResourceStats/VBoxContainer/Voidstone/VBoxContainer/VoidstoneValue.text = str(GameManager.Voidstone)
+	$ResourceStats/VBoxContainer/Voidstone/VBoxContainer/VoidstoneValue.text = str(GameManager.Voidstone)
 #	$ResourceStats/VBoxContainer/Lunarium/VBoxContainer/LunariumValue.text = str(GameManager.Lunarium)
 #	$ResourceStats/VBoxContainer/Ethertite/VBoxContainer/EthertiteValue.text = str(GameManager.Ethertite)
 #	$ResourceStats/VBoxContainer/AtekGas/VBoxContainer/AtekGasValue.text = str(GameManager.AtekGas)
