@@ -5,6 +5,9 @@ var CurrentSpawnable : StaticBody
 
 #--- PRODUCTION PLANTS
 var RunewoodGatherers : PackedScene = ResourceLoader.load("res://Assets/MapObjects/Buildings/Gathering/RunewoodPlant/RunewoodPlant.tscn")
+var VoidstoneGatherers : PackedScene = ResourceLoader.load("res://Assets/MapObjects/Buildings/Gathering/VoidstoneGatherers/VoidstoneGatherers.tscn")
+var EthertiteGatherers : PackedScene = ResourceLoader.load("res://Assets/MapObjects/Buildings/Gathering/EthertiteGatherers/EthertiteGatherers.tscn")
+var AtekGasGatherers : PackedScene = ResourceLoader.load("res://Assets/MapObjects/Buildings/Gathering/AtekGasGatherers/AtekGasGatherers.tscn")
 #--- MISC BUILDINGS
 var StorageUnit : PackedScene = ResourceLoader.load("res://Assets/MapObjects/Buildings/Misc Buildings/Storage Unit/StorageUnit.tscn")
 
@@ -27,6 +30,7 @@ func _process(delta):
 				get_tree().root.add_child(obj)
 				obj.ActiveBuildableObject = false
 				obj.runSpawn()
+				obj.spawned = true
 				obj.SetDisabled(false)
 				chargeObject(obj)
 				obj.translation = CurrentSpawnable.translation
@@ -73,9 +77,24 @@ func SpawnObj(obj):
 	GameManager.CurrentState = GameManager.State.Building
 	print("Object Created")
 	
-	
+## [[ BUILDINGS ]]
+
+#---Production Plants
 func SpawnRunewoodGatherers():
 	SpawnObj(RunewoodGatherers)
-	
+func SpawnVoidstoneGatherers():
+	SpawnObj(VoidstoneGatherers)
+func SpawnEthertiteGatherers():
+	SpawnObj(EthertiteGatherers)
+func SpawnAtekGasGatherers():
+	SpawnObj(AtekGasGatherers)
+
+
+#---Misc	
 func SpawnStorageUnit():
 	SpawnObj(StorageUnit)
+
+#---Decorations
+#---Nature
+#---Magic
+#---Creatures

@@ -28,6 +28,13 @@ func _on_NoBuildZone_area_exited(area):
 #---Production Plants
 func _on_BuildRunewoodGatherersButton_button_down():
 	BuildingManager.SpawnRunewoodGatherers()
+func _on_BuildVoidstoneMine_button_down():
+	BuildingManager.SpawnVoidstoneGatherers()
+func _on_BuildEthertiteForge_button_down():
+	BuildingManager.SpawnEthertiteGatherers()
+func _on_BuildAtekGasPlant_button_down():
+	BuildingManager.SpawnAtekGasGatherers()
+	
 	
 #---Misc
 func _on_BuildStorageUnit_button_down():
@@ -37,3 +44,14 @@ func _on_BuildStorageUnit_button_down():
 	#---Nature
 	#---Magic
 	#---Creatures
+
+
+
+
+
+
+
+
+
+
+

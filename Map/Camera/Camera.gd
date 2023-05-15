@@ -27,3 +27,7 @@ func _process(delta):
 	if Input.is_action_just_released("MouseWheelDown"):
 		if $Camera.global_translation.distance_to(global_translation) < 50:
 			$Camera.global_translation += $Camera.global_transform.basis.z * 2
+
+
+func _on_BuildEthertiteForge_button_down():
+	pass # Replace with function body.

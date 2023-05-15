@@ -14,7 +14,7 @@ export var WalkSpeed : int = 6
 export var ResourceGenerationAmount := 0
 onready var navagent : NavigationAgent = $NavigationAgent
 var runOnce := true
-export(String, "Runewood", "Voidstone", "Ethertite", "Atekgas") var ResourceNameToGet
+export(String, "Runewood", "Voidstone", "Ethertite", "AtekGas") var ResourceNameToGet
 
  
 func _process(delta):		
@@ -29,16 +29,15 @@ func _process(delta):
 			pass
 						
 		Task.Searching:
-			var resources = get_tree().get_nodes_in_group(ResourceNameToGet) 
+			var resources = get_tree().get_nodes_in_group(ResourceNameToGet)
 			var nearestResourceObject = resources[0]
 			for i in resources:
 				if i.translation.distance_to(translation) < nearestResourceObject.translation.distance_to(translation):
 					nearestResourceObject = i
 			navagent.set_target_location(nearestResourceObject.global_translation)
 			CurrentTask = Task.Walking
-			pass			
- 
-								
+			pass
+			
 		Task.Delivering: 
 			var stockpiles = get_tree().get_nodes_in_group("Stockpile")
 			if stockpiles.size() > 0:
@@ -49,7 +48,6 @@ func _process(delta):
 							nearestStockpileObject = i
 				navagent.set_target_location(nearestStockpileObject.get_node("SpawnPoint").global_translation)
 				CurrentTask = Task.Walking
-				
 			pass
 		Task.Walking:
 			if navagent.is_navigation_finished():
